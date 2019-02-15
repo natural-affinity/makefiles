@@ -14,7 +14,7 @@ watch: install
 
 # run all tests and rebuild when changed
 test: $(BIN)
-	@go test $(PACKAGE)
+	@go test $(PACKAGE) $(ARGS)
 
 # build and install application
 install: $(BIN)
