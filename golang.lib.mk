@@ -1,4 +1,4 @@
-APPLICATION := $(lastword $(subst /, ,$(dir $(CURDIR))))
+APPLICATION := $(lastword $(subst /, ,$(dir $(shell go list))))
 PLATFORM := $(shell go env GOOS)_$(shell go env GOARCH)
 PACKAGE := $(shell go list)
 TESTS := $(wildcard *_test.go **/*_test.go)
