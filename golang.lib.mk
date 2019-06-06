@@ -17,6 +17,10 @@ watch: install
 test: $(BIN)
 	@go test $(PACKAGE)/...
 
+# run make test and update golden files
+golden: $(BIN)
+	$(MAKE) test ARGS="--update"
+
 # build and install application
 install: $(BIN)
 
