@@ -10,7 +10,7 @@ $(BIN): $(SRC)
 
 # run command at fixed intervals
 watch: install
-	@kouhai -i 2s '$(MAKE) test'
+	@kouhai -i 2s 'make test'
 
 # run all tests and rebuild when changed
 test: $(BIN)
