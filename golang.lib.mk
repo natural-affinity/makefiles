@@ -28,4 +28,4 @@ install: $(BIN)
 clean: 
 	@go clean -i
 
-.PHONY: clean test watch install
+.PHONY: clean test golden watch install
