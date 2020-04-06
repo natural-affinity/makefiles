@@ -6,7 +6,7 @@ Makefiles for reuse across projects.
 * `golang.lib.mk`: Golang applications without a main package (library)
 
 ## Usage
-1. Include via `make --include-dir=DIR` or use [mmake](https://github.com/tj/mmake).
+Include via `make --include-dir=DIR` or use [mmake](https://github.com/tj/mmake).
 
 ```bash
 readonly MKHOME="$HOME/projects"
@@ -17,7 +17,7 @@ function make() {
 }
 ```
 
-2. Reuse rules via the `include` directive.
+Reuse rules via the `include` directive.
 
 ```Makefile
 # include common makefile
@@ -25,6 +25,11 @@ include github.com/natural-affinity/makefiles/golang.bin.mk
 
 # add more rules
 ```
+
+## Links
+* [Tutorial](http://makefiletutorial.com/)
+* [GNU make](https://www.gnu.org/software/make/manual/make.html)
+* [go command](https://golang.org/cmd/go/)
 
 ## License
 Released under the MIT License. See [LICENSE.md](./LICENSE.md) for details.
