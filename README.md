@@ -17,11 +17,17 @@ function make() {
 }
 ```
 
+Clone the repo into `$MKHOME`.
+```bash
+cd $MKHOME
+git clone https://github.com/natural-affinity/makefiles.git
+```
+
 Reuse rules via the `include` directive.
 
 ```Makefile
 # include common makefile
-include github.com/natural-affinity/makefiles/golang.bin.mk
+include makefiles/golang.bin.mk
 
 # add more rules
 ```
