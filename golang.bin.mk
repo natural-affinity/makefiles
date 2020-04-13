@@ -6,7 +6,7 @@ BIN := $(value GOPATH)\bin\$(APPLICATION).exe
 
 # build when changed
 $(BIN): $(SRC)
-	go build -o $(BIN)
+	go build -o $(BIN) -ldflags '-s -w'
 
 # run command at fixed intervals
 watch: install
