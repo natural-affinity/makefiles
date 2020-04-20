@@ -1,5 +1,5 @@
 APPLICATION := $(lastword $(subst /, ,$(dir $(shell go list)/)))
-PACKAGE := $(shell go list)/...
+PACKAGE := $(shell go list)
 TESTS := $(wildcard *_test.go **/*_test.go)
 SRC := $(filter-out $(TESTS), $(wildcard *.go **/*.go))
 BIN := $(value GOPATH)\bin\$(APPLICATION).exe
@@ -14,7 +14,7 @@ watch: install
 
 # run all tests and rebuild when changed
 test: $(BIN)
-	@go test $(PACKAGE) $(ARGS)
+	@go test $(PACKAGE)/... $(ARGS)
 
 # run make test and update golden files
 golden: $(BIN)
