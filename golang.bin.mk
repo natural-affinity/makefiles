@@ -2,7 +2,8 @@ APPLICATION := $(lastword $(subst /, ,$(dir $(shell go list)/)))
 PACKAGE := $(shell go list)
 TESTS := $(wildcard *_test.go **/*_test.go)
 SRC := $(filter-out $(TESTS), $(wildcard *.go **/*.go))
-BIN := $(value GOPATH)\bin\$(APPLICATION).exe
+EXT := $(shell go env GOEXE)
+BIN := $(value GOPATH)\bin\$(APPLICATION)$(EXT)
 
 # build when changed
 $(BIN): $(SRC)
