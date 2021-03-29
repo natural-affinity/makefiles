@@ -1,4 +1,4 @@
-# Makefiles (メイクファイル)
+# Makefiles (メイク)
 
 Makefiles for reuse across projects.
 
